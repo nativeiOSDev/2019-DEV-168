@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		FBBEA20C2291BEF700D07D59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA20B2291BEF700D07D59 /* AppDelegate.swift */; };
-		FBBEA20E2291BEF700D07D59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA20D2291BEF700D07D59 /* ViewController.swift */; };
+		FBBEA20E2291BEF700D07D59 /* BerlinClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA20D2291BEF700D07D59 /* BerlinClockViewController.swift */; };
 		FBBEA2112291BEF700D07D59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBBEA20F2291BEF700D07D59 /* Main.storyboard */; };
 		FBBEA2132291BEF900D07D59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBBEA2122291BEF900D07D59 /* Assets.xcassets */; };
 		FBBEA2162291BEF900D07D59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBBEA2142291BEF900D07D59 /* LaunchScreen.storyboard */; };
 		FBBEA2212291BEF900D07D59 /* BerlinClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA2202291BEF900D07D59 /* BerlinClockTests.swift */; };
+		FBBEA22F2291BF5B00D07D59 /* BerlinClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA22E2291BF5B00D07D59 /* BerlinClockViewModel.swift */; };
+		FBBEA2312291BF9000D07D59 /* DigitalToBerlinClockConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA2302291BF9000D07D59 /* DigitalToBerlinClockConverter.swift */; };
+		FBBEA2332291BFA300D07D59 /* BerlinClockConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA2322291BFA300D07D59 /* BerlinClockConstants.swift */; };
+		FBBEA2362291C01300D07D59 /* BerlinClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBEA2352291C01300D07D59 /* BerlinClockView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +32,7 @@
 /* Begin PBXFileReference section */
 		FBBEA2082291BEF700D07D59 /* BerlinClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BerlinClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBEA20B2291BEF700D07D59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FBBEA20D2291BEF700D07D59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FBBEA20D2291BEF700D07D59 /* BerlinClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockViewController.swift; sourceTree = "<group>"; };
 		FBBEA2102291BEF700D07D59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FBBEA2122291BEF900D07D59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBBEA2152291BEF900D07D59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		FBBEA21C2291BEF900D07D59 /* BerlinClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BerlinClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBEA2202291BEF900D07D59 /* BerlinClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockTests.swift; sourceTree = "<group>"; };
 		FBBEA2222291BEF900D07D59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBBEA22E2291BF5B00D07D59 /* BerlinClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockViewModel.swift; sourceTree = "<group>"; };
+		FBBEA2302291BF9000D07D59 /* DigitalToBerlinClockConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalToBerlinClockConverter.swift; sourceTree = "<group>"; };
+		FBBEA2322291BFA300D07D59 /* BerlinClockConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockConstants.swift; sourceTree = "<group>"; };
+		FBBEA2352291C01300D07D59 /* BerlinClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +85,10 @@
 		FBBEA20A2291BEF700D07D59 /* BerlinClock */ = {
 			isa = PBXGroup;
 			children = (
-				FBBEA20B2291BEF700D07D59 /* AppDelegate.swift */,
-				FBBEA20D2291BEF700D07D59 /* ViewController.swift */,
+				FBBEA2342291BFB100D07D59 /* AppDelegate */,
+				FBBEA22C2291BF0800D07D59 /* ViewModel */,
+				FBBEA22B2291BF0000D07D59 /* View */,
+				FBBEA22D2291BF1100D07D59 /* Helpers */,
 				FBBEA20F2291BEF700D07D59 /* Main.storyboard */,
 				FBBEA2122291BEF900D07D59 /* Assets.xcassets */,
 				FBBEA2142291BEF900D07D59 /* LaunchScreen.storyboard */,
@@ -94,6 +104,40 @@
 				FBBEA2222291BEF900D07D59 /* Info.plist */,
 			);
 			path = BerlinClockTests;
+			sourceTree = "<group>";
+		};
+		FBBEA22B2291BF0000D07D59 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FBBEA20D2291BEF700D07D59 /* BerlinClockViewController.swift */,
+				FBBEA2352291C01300D07D59 /* BerlinClockView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FBBEA22C2291BF0800D07D59 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FBBEA22E2291BF5B00D07D59 /* BerlinClockViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FBBEA22D2291BF1100D07D59 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FBBEA2302291BF9000D07D59 /* DigitalToBerlinClockConverter.swift */,
+				FBBEA2322291BFA300D07D59 /* BerlinClockConstants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FBBEA2342291BFB100D07D59 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				FBBEA20B2291BEF700D07D59 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +241,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBBEA20E2291BEF700D07D59 /* ViewController.swift in Sources */,
+				FBBEA20E2291BEF700D07D59 /* BerlinClockViewController.swift in Sources */,
+				FBBEA22F2291BF5B00D07D59 /* BerlinClockViewModel.swift in Sources */,
+				FBBEA2332291BFA300D07D59 /* BerlinClockConstants.swift in Sources */,
 				FBBEA20C2291BEF700D07D59 /* AppDelegate.swift in Sources */,
+				FBBEA2312291BF9000D07D59 /* DigitalToBerlinClockConverter.swift in Sources */,
+				FBBEA2362291C01300D07D59 /* BerlinClockView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
